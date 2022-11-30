@@ -14,16 +14,11 @@ import javax.servlet.http.HttpSession;
 import Member.MemberDAO;
 import Member.MemberVO;
 
-/**
- * Servlet implementation class DeleteContoller
- */
+
 @WebServlet("/withdrawal")
 public class WithdrawalController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
     public WithdrawalController() {
         super();
         // TODO Auto-generated constructor stub
