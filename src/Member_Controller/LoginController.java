@@ -12,18 +12,19 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import Member.MemberDAO;
+import Member.MemberVO;
 
 /**
- * Servlet implementation class ModifyProfile
+ * Servlet implementation class LoginController
  */
-@WebServlet("/modify")
-public class ModifyProfile extends HttpServlet {
+@WebServlet("/signIn")
+public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ModifyProfile() {
+    public LoginController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,16 +33,26 @@ public class ModifyProfile extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
 		MemberDAO dao = new MemberDAO();
+		MemberVO vo = new MemberVO();
 		HttpSession session = request.getSession();
 		try {
-			dao.updateMember((String)session.getAttribute("id"), request.getParameter("name"), request.getParameter("email"), request.getParameter("phoneNumber"), request.getParameter("address"));
-			System.out.println("modifyProfile   | id: " + (String)session.getAttribute("id") + ", name: " + request.getParameter("name") + ", email: " + request.getParameter("email") 
-			+ ", phoneNumber: " + request.getParameter("phoneNumber") + ", address: " + request.getParameter("address"));
-			System.out.println("------------------------------------------------------------------------");
-			RequestDispatcher dispatcher = request.getRequestDispatcher("myPage/myPage.jsp");
-			dispatcher.forward(request, response);
+			vo = dao.checkDB(request.getParameter("id"), request.getParameter("password"));
+			if (vo.getId() != null) {
+				session.setAttribute("id", vo.getId());
+				session.setAttribute("name", vo.getName());
+				session.setAttribute("manager", vo.getManager());
+				
+				System.out.println("signIn   | id: " + vo.getId() + ", manager: " + vo.getManager());
+				System.out.println("------------------------------------------------------------------------");
+				
+				RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+				dispatcher.forward(request, response);
+			} else {
+				RequestDispatcher dispatcher = request.getRequestDispatcher("errorPage.jsp?hidden=loginError");
+				dispatcher.forward(request, response);
+			}
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

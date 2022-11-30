@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <% 
-	int isManager = (int)session.getAttribute("isManager");
+	String manager = (String)session.getAttribute("manager");
+	String name = (String)session.getAttribute("name");
 	String p;
 %>
 <!DOCTYPE html>
@@ -16,6 +17,9 @@
 .faq {
 	border-width: medium;
 }
+#userId {
+	text-align: right;
+}
 </style>
 
 <meta charset="UTF-8">
@@ -27,9 +31,10 @@
 <a href="faq.jsp" class="faq">FAQ</a>
 
 <span>
-<a href="ctrlMem.jsp?hidden=signOut" >로그아웃</a> | 
+
+<a href="signOut" >로그아웃</a> | 
 <%
-	if (isManager == 1) {
+	if (manager.equals("1")) {
 		// manager
 		p = "managerPage/managerPage.jsp";
 	} else {
@@ -37,11 +42,20 @@
 		p = "myPage/myPage.jsp";
 	}
 %>
+
 <a href="<%= p %>">마이페이지</a>
 </span>
+
 </header>
 
+<div id="userId">
+	<%= name + "님" %>
+</div>
+
+
+
 <nav style="margin-left: 200px; margin-right: 200px; height: 15%; ">
+<%@ include file="nav.jsp" %>
 </nav>
 </body>
 </html>

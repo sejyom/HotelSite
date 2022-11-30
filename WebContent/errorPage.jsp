@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	String hidden = request.getParameter("hidden");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,11 +10,27 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<h2>에러~~~~~~~~~</h2>
+<%
+if (hidden.equals("loginError")) {
+%>
 <script>
-	alert("입력하신 비밀번호가 일치하지 않습니다.");
+	alert("입력하신 정보와 일치하는 회원 정보가 없습니다.");
+	history.back();
 </script>
 <%
-	response.sendRedirect("myPage/withdrawal.jsp");
+} else if(hidden.equals("withdrawalError")){
 %>
+<script>
+	alert("비밀번호를 확인해 주세요.");
+	history.back();
+</script>
+<%
+}
+%>
+<%-- <%
+	response.sendRedirect("myPage/withdrawal.jsp");
+%> --%>
 </body>
 </html>

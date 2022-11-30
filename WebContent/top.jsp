@@ -28,5 +28,9 @@
 		<a href="loginForm.jsp">마이페이지</a>
 	</span>
 </header>
+
+<nav style="margin-left: 200px; margin-right: 200px; height: 15%; ">
+<%@ include file="nav.jsp" %>
+</nav>
 </body>
 </html>

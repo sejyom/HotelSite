@@ -30,13 +30,12 @@ window.close();
 
 
 <h2>프로필 수정</h2>
-<form method="post" action="../modify.do">
+<form method="post" action="../modify">
 변경할 이름 : <input type="text" name="name"><br>
 변경할 이메일 : <input type="email" name="email"><br>
 변경할 전화번호 : <input type="text" name="phoneNumber"><br> 
 변경할 주소 : <input type="text" name="address" id="address" readonly><br>
 <input type="submit" value="수정">
-<input type="hidden" name="hidden" value="modifyProfile">
 </form>
 </body>
 </html>

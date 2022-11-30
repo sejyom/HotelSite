@@ -55,7 +55,7 @@ function test() {
 }
 </script> -->
 
-<form method="post" action="insert.do">
+<form method="post" action="insert">
 아이디 : <input type="text" name="id"><br>
 비밀번호 : <input type="password" name="password" id="password"><br>
 <!-- required onchange="validatePassword()" -->
@@ -65,7 +65,6 @@ function test() {
 전화번호 : <input type="text" name="phoneNumber"><br>
 주소 : <input type="text" name="address" id="address" readonly><br>
 <input type="submit" value="회원가입">
-<input type="hidden" name="hidden" value="join">
 </form>
 </body>
 </html>

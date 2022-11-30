@@ -17,7 +17,7 @@ import Member.MemberVO;
  * Servlet implementation class InsertController
  */
 
-@WebServlet("/insert.do")
+@WebServlet("/insert")
 public class InsertController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -45,14 +45,6 @@ public class InsertController extends HttpServlet {
 			manager = "1";
 		} else manager = "0";
 		
-		System.out.println("id : " + id);
-		System.out.println("pwd : " + password);
-		System.out.println("name : " + name);
-		System.out.println("email : " + email);
-		System.out.println("address : " + address);
-		System.out.println("phoneNumber : " + phoneNumber);
-		System.out.println("manager : " + manager);
-		
 		MemberVO vo = new MemberVO();
 		vo.setId(id);
 		vo.setPassword(password);
@@ -64,13 +56,13 @@ public class InsertController extends HttpServlet {
 		MemberDAO dao = new MemberDAO();
 		try {
 			dao.insertMember(vo);
+			System.out.println("join   | id: " + id + ", password: " + password + ", manager: " + manager + ", address: " + address);
+			System.out.println("------------------------------------------------------------------------");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+			dispatcher.forward(request, response);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		System.out.println("join   | id: " + id + ", password: " + password + ", manager: " + manager + ", address: " + address);
-		System.out.println("------------------------------------------------------------------------");
-		RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
-		dispatcher.forward(request, response);
 	}
 
 }

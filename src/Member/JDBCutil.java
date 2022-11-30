@@ -7,7 +7,7 @@ public class JDBCutil {
 	   final static String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";   
 	   final static String JDBC_URL = "jdbc:mysql://localhost:3306/webProject?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true";
 	   final static String JDBC_USER = "root";
-	   final static String JDBC_PASS = "Park3587rs!";
+	   final static String JDBC_PASS = "sejyomeee2!";
 
 	   public static Connection getConnection() {
 		   try {

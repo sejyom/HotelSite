@@ -37,12 +37,16 @@ public class ModifyPassword extends HttpServlet {
 		HttpSession session = request.getSession();
 		try {
 			dao.updatePassword((String)session.getAttribute("id"), request.getParameter("new_password"));
+			
+			System.out.println("modifyPassword   | id: " + (String)session.getAttribute("id") + ", new_password: " + request.getParameter("new_password"));
+			System.out.println("------------------------------------------------------------------------");
+
+			RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+			dispatcher.forward(request, response);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
-		dispatcher.forward(request, response);
 	}
 
 	/**

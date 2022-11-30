@@ -17,14 +17,14 @@ import Member.MemberVO;
 /**
  * Servlet implementation class DeleteContoller
  */
-@WebServlet("/delete.do")
-public class DeleteContoller extends HttpServlet {
+@WebServlet("/withdrawal")
+public class WithdrawalController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public DeleteContoller() {
+    public WithdrawalController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -37,21 +37,24 @@ public class DeleteContoller extends HttpServlet {
 		MemberDAO dao = new MemberDAO();
 		MemberVO vo = new MemberVO();
 		HttpSession session = request.getSession();
+		RequestDispatcher dispatcher;
 		String  id = (String)session.getAttribute("id");
 		String pwd = request.getParameter("password");
-
+		
 		try {
 			vo = dao.checkID(id);
-			RequestDispatcher dispatcher;
 			if(vo.getPassword().equals(pwd)) {
+				System.out.println("withdrawal(user)   | id: " + id);
+				System.out.println("------------------------------------------------------------------------");
 				dao.deleteMember(id);
 				session.invalidate();
-				 dispatcher = request.getRequestDispatcher("index.jsp");
+				dispatcher = request.getRequestDispatcher("index.jsp");
 				dispatcher.forward(request, response);
-			}else {
-				dispatcher = request.getRequestDispatcher("errorPage.jsp");
+			} else {
+				dispatcher = request.getRequestDispatcher("errorPage.jsp?=hidden=withdrawalError");
 				dispatcher.forward(request, response);
 			}
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

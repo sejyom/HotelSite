@@ -16,7 +16,6 @@
 현재 비밀번호 : <input type="password" name="password" placeholder="현재 비밀번호"><br>
 새 비밀번호 : <input type="password" name="new_password" placeholder="새 비밀번호"><br>
 <input type="submit" value="수정">
-<input type="hidden" name="hidden" value="modifyPassword">
 </form>
 </body>
 </html>

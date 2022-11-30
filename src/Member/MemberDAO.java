@@ -108,6 +108,7 @@ public class MemberDAO {
 	
 	public ArrayList<MemberVO> selectMemberList() throws SQLException {
 		conn = JDBCutil.getConnection();
+		pstmt = conn.prepareStatement("select * from tbl_member;");
 		rs = pstmt.executeQuery();
 		
 		ArrayList<MemberVO> memberList = new ArrayList<MemberVO>();

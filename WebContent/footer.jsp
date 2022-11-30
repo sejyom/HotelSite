@@ -60,7 +60,7 @@
 <div class="item">
 	<h4>PRIVACY</h4>
 	<span>
-		<a href="">개인정보처리방침</a><br>
+		<a href="notice2.jsp">개인정보처리방침</a><br>
 		<a href="">이용약관</a>
 	</span>
 </div>
