@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" isErrorPage="true" %>
 <%
 	String hidden = request.getParameter("hidden");
 %>
@@ -10,8 +10,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<h2>에러~~~~~~~~~</h2>
 <%
 if (hidden.equals("loginError")) {
 %>
@@ -20,7 +18,7 @@ if (hidden.equals("loginError")) {
 	history.back();
 </script>
 <%
-} else if(hidden.equals("withdrawalError")){
+} else if (hidden.equals("withdrawalError") || hidden.equals("modifyPassword")) {
 %>
 <script>
 	alert("비밀번호를 확인해 주세요.");

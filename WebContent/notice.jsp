@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width", initial-scale="1">
+<meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/custom.css">
 <title>공지사항</title>
@@ -13,11 +13,11 @@
 		text-decoration: none;
 	}
 </style>
-<br>
-<h4>공지사항</h4> 
 <title>Insert title here</title>
 </head>
 <body>
+<br>
+<h4>공지사항</h4> 
 	<div class="container">
 		<div class="row">
 			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">

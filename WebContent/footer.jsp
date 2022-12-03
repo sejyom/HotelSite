@@ -19,28 +19,29 @@
 <body>
 <footer class="footer" style="margin-top: 30px; margin-bottom: 20px;">
 <div class="item">
-	<img src="img/gym.png" style="height: 100px; width: 100px;" /><br>
+	<img src="img/gym.png" style="height: 60px; width: 60px;" /><br>
 	헬스장	
 </div>
 	
 <div>
-	<img src="img/meeting.png" style="height: 100px; width:100px;" /><br>
+	<img src="img/meeting.png" style="height: 60px; width:60px;" /><br>
 	미팅룸
 </div>
 
 <div class="item">
-	<img src="img/pet.png" style="height: 100px; width:100px;" /><br>
+	<img src="img/pet.png" style="height: 60px; width:60px;" /><br>
 	반려동물 동반
 </div>
 
 <div class="item">
-	<img src="img/wifi.png" style="height: 100px; width:100px;" /><br>
+	<img src="img/wifi.png" style="height: 60px; width:60px;" /><br>
 	와이파이 이용
 </div>
 </footer>
-
+<br>
+<br>
+<br>
 <footer class="footer">
-
 <div class="item">
 	<h4>CALL US</h4>
 	<span>

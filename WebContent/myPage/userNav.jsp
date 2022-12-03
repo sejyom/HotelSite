@@ -22,9 +22,9 @@
 </div>
 
 <div>
-<h5>예약 확인/취소</h5>
+<h5>예약 및 리뷰</h5>
 	<a href="bookingRoom.jsp">객실 예약</a><br>
-	<a href="bookingFacility.jsp">이용시설 예약</a><br>
+	<a href="review.jsp">리뷰</a><br>
 </div>
 
 <div>
