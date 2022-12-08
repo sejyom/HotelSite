@@ -13,10 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import Member.MemberDAO;
 import Member.MemberVO;
 
-/**
- * Servlet implementation class InsertController
- */
-
 @WebServlet("/insert")
 public class InsertController extends HttpServlet {
 	private static final long serialVersionUID = 1L;

@@ -10,10 +10,27 @@
 <head>
 <meta charset="UTF-8">
 <title>마이 페이지</title>
+<link href="myPage.css">
 </head>
 <body>
-<jsp:include page="userNav.jsp">
-	<jsp:param name="id" value="<%= id %>"/>
-</jsp:include>
+	<%
+	String cont = request.getParameter("con");
+	if (cont == null)
+		cont = "modifyProfile.jsp";
+	%>
+
+	<header>
+		<%@ include file="../top.jsp"%>
+	</header>
+	
+	<div id="content">
+		<jsp:include page="userNav.jsp" flush="true">
+			<jsp:param name="id" value="<%= id %>"/>
+		</jsp:include>
+	</div>
+	
+	<footer>
+		<jsp:include page="../footer.jsp" />
+	</footer>
 </body>
 </html>

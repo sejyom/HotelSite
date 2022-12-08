@@ -1,14 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%> 
+<%
+	String title="hotelIntro.jsp";
+	session.setAttribute("title", title);
+%>      
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>호텔 소개</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width", initial-scale="1">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/custom.css">
+<title>SSS HOTEL</title>
 </head>
 <body>
+<section id="content">
+<center>
+<br>
+<br>
 <img src= "img/introduce.PNG" width="1110">
-<h4 style="text-align:center; color:#483D8B;">세서시 호텔(SSS HOTEL)</h4>
+<h2 style="color:#1A4091">세서시 호텔(SSS HOTEL)</h2>
 <p style="text-align:center;">SSH 호텔은 서울의 중심에 위치해 <br>
 최적의 위치 조건과 최고의 서비스를 자랑합니다.<br>
 <br>
@@ -20,19 +31,19 @@
 <br>
 세서시 호텔은 고객에게 최고의 서비스와 감동을 주는 브랜드를 지향하고 있습니다.<br> </p>
 <br><br>
-<h3 style="text-align:center; color:#0000CD;">도심 속 힐링</h3>
+<h3 style="text-align:center; color:#DB694F;">도심 속 힐링</h3>
 <p style="text-align:center;">
 세서시 호텔은 봄에는 벚꽃을, 여름에는 화창한 햇살을, 가을에는 단풍의 아름다움, 겨울의 설경을<br> 
 모두 즐길 수 있어 사계절의 아름다움을 모두 느낄 수 있습니다</p>
 <br>
 
-<h3 style="text-align:center; color:#0000CD;">비전</h3>
+<h3 style="text-align:center; color:#DB694F;">비전</h3>
 <p style="text-align:center;">
 Premium Lifestyle Leading Company <br>
 최고의 품격과 신뢰를 바탕으로 고객이 꿈꾸는 라이프 스타일을 제공하는 선도기업</p>
 <br>
 
-<h3 style="text-align:center; color:#0000CD;">SIGNATURE EXPERIENCE</h3>
+<h3 style="text-align:center; color:#DB694F;">SIGNATURE EXPERIENCE</h3>
 <p style="text-align:center;">
 천상의 편안함, 웨스틴 헤븐리 베드
 SIMMONS사에서 제작한 <br>
@@ -42,5 +53,7 @@ SIMMONS사에서 제작한 <br>
 인체 곡선을 따라 따로따로 움직이는 포켓스프링이 인체를 완벽하게 받쳐주며, <br>
 특별 제작된 필로우 톱 매트리스가 깔려 침구가 몸을 감싸는 듯한 포근함을 드립니다</p>
 <br>
+</center>
+</section>
 </body>
 </html>

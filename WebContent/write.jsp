@@ -8,11 +8,13 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/custom.css">
 <title>문의하기 작성폼</title>
-<br>
-<h4>문의하기</h4>
+<h3 style="color:#EB6952">Q&A  문의하기</h3> <br>
+<style>
+	h3 { text-align: center; }
+</style>
 </head>
 <body>
-
+<center>
 	<!-- 글 작성 양식 -->
 	<div class="container">
 		<div class="row">
@@ -59,5 +61,6 @@
 			</form>
 		</div>
 	</div>
+	</center>
 </body>
 </html>

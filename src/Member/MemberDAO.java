@@ -4,9 +4,6 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class MemberDAO {
-	String jdbcDriver = "jdbc:mysql://localhost:3306/webProject?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true";
-	String dbUser = "root";
-	String dbPass = "Park3587rs!";
 	PreparedStatement pstmt = null;
 	Connection conn = null;
 	ResultSet rs = null;

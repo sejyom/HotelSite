@@ -8,14 +8,15 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/custom.css">
 <title>문의하기</title>
+<h3 style="color:#EB6952">Q&A 문의하기</h3> <br>
 <style type="text/css">
 	a, a:hover {
 		color: #000000;
 		text-decoration: none;
 	}
+	h3 { text-align: center; }
 </style>
-<br>
-<h4>Q&A 문의하기</h4> 
+<br> 
 </head>
 <body>
 	<div class="container">

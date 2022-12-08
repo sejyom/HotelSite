@@ -24,9 +24,6 @@ public class WithdrawalController extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		MemberDAO dao = new MemberDAO();
@@ -46,7 +43,7 @@ public class WithdrawalController extends HttpServlet {
 				dispatcher = request.getRequestDispatcher("index.jsp");
 				dispatcher.forward(request, response);
 			} else {
-				dispatcher = request.getRequestDispatcher("errorPage.jsp?=hidden=withdrawalError");
+				dispatcher = request.getRequestDispatcher("errorPage.jsp?hidden=withdrawalError");
 				dispatcher.forward(request, response);
 			}
 			
@@ -56,9 +53,6 @@ public class WithdrawalController extends HttpServlet {
 		}
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);

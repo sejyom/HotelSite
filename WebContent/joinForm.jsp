@@ -6,9 +6,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="css/styling.css" rel="stylesheet">
 </head>
-
 <body>
+<center>
+<br>
+<a href="index.jsp">
+<img src="img/logo_text01.png" style="height:50px; width:150px;" /></center>
+</a>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
 window.onload = function(){
@@ -54,17 +59,30 @@ function test() {
 	}
 }
 </script> -->
-
+<section class="join">
+<h2>회원가입</h2>
+<ul>
 <form method="post" action="insert">
-아이디 : <input type="text" name="id"><br>
-비밀번호 : <input type="password" name="password" id="password"><br>
-<!-- required onchange="validatePassword()" -->
-<!-- 비밀번호 확인: <input type="password" id="confirm_password"><br> -->
-이름 : <input type="text" name="name"><br>
-이메일 : <input type="email" name="email"><br>
-전화번호 : <input type="text" name="phoneNumber"><br>
-주소 : <input type="text" name="address" id="address" readonly><br>
-<input type="submit" value="회원가입">
+	아이디<br>
+	<li><input type="text" name="id"></li>
+	비밀번호<br>
+	<li><input type="password" name="password" id="password"></li>
+	<!-- required onchange="validatePassword()" -->
+	<!-- 비밀번호 확인: <input type="password" id="confirm_password"><br> -->
+	이름<br>
+	<li><input type="text" name="name"></li>
+	이메일<br>
+	<li><input type="email" name="email"></li>
+	전화번호<br>
+	<li><input type="text" name="phoneNumber"></li>
+	<li>주소<br>
+	<input type="text" name="address" id="address" readonly></li>
+	<li><button type="submit">회원가입</button></li>
+	<!-- 
+	<input type="submit" value="회원가입">
+	 -->
+</ul>
 </form>
+</section>
 </body>
 </html>

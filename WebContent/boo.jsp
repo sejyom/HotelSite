@@ -1,16 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%> 
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width", initial-scale="1">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/custom.css">
 <title>부가 시설</title>
+	<style>
+		h3 { text-align: center; }
+	</style>
 </head>
 <body>
-
+<section id="content">
+<h3 style="color:#EB6952">SSS 호텔 부가시설</h3> <br>
 <center>
 <img src= "img/Fitness.PNG" width="350"> </center>
-<h4 style="text-align:center; color:#483D8B;">피트니스</h4>
+<h4 style="font-weight:bold; text-align:center; color:#483D8B;">피트니스</h4>
 <p style="text-align:center;">
 피트니스 센터는 최신식 설비 및 피트니스 수업이 가능한 <br> 
 프라이빗 스튜디오를 갖추고 있습니다.<br> 
@@ -22,7 +29,7 @@
 
 <center>
 <img src= "img/pool.PNG" width="350"> </center>
-<h4 style="text-align:center; color:#483D8B;">수영장</h4>
+<h4 style="font-weight:bold; text-align:center; color:#483D8B;">수영장</h4>
 <p style="text-align:center;">
 인피니티 풀 (infinity pool) 스타일로, 통유리창을 통해 들어오는 <br>
 자연 채광에 따라 매시간 색다른 분위기를 느끼실 수 있습니다. <br>
@@ -32,7 +39,7 @@
 
 <center>
 <img src= "img/spa.PNG" width="350"> </center>
-<h4 style="text-align:center; color:#483D8B;">스파</h4>
+<h4 style="font-weight:bold; text-align:center; color:#483D8B;">스파</h4>
 <p style="text-align:center;">
 자연과 인간의 조화된 아름다움을 추구하는 오셀라스 스파는<br> 
 2개의 커플룸을 포함해 총 7개의 스파 트리트먼트룸을 갖추고 있으며,<br> 
@@ -46,7 +53,7 @@
 
 <center>
 <img src= "img/restaurant.jpg" width="350"> </center>
-<h4 style="text-align:center; color:#483D8B;">레스토랑</h4>
+<h4 style="font-weight:bold; text-align:center; color:#483D8B;">레스토랑</h4>
 <p style="text-align:center;">
 화려한 야경을 자랑하는 레스토랑 다이닝룸은 <br>
 오픈 키친의 숯불 그릴에서 바로 구운 최상급 스테이크와 <br>
@@ -58,5 +65,6 @@ SSS 스타일로 재해석한 한식 단품 메뉴도 제공됩니다. <br>
 레스토랑 운영 시간: 오후 3시 - 오후 11시<br></p>
 <br>
 <br>
+</section>
 </body>
 </html>

@@ -14,24 +14,15 @@ import javax.servlet.http.HttpSession;
 import Member.MemberDAO;
 import Member.MemberVO;
 
-/**
- * Servlet implementation class LoginController
- */
 @WebServlet("/signIn")
 public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
     public LoginController() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		MemberDAO dao = new MemberDAO();
 		MemberVO vo = new MemberVO();
