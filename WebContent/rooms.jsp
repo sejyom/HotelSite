@@ -14,18 +14,18 @@ var popupY= (window.screen.height / 2) - (550 / 2);
 <div class="rooms">
 
 	<% if(session.getAttribute("rlist")!=null){
-		@SuppressWarnings("unchecked") ArrayList<RoomDTO> rlist= (ArrayList<RoomDTO>)session.getAttribute("rlist");
+		ArrayList<RoomDTO> rlist= (ArrayList<RoomDTO>)session.getAttribute("rlist");
 		for(int i=0;i<rlist.size();i++){ 
 		RoomDTO rd=(RoomDTO)rlist.get(i); %>
 	<div class="room">
 	<h3><%=rd.getRoomId()%></h3>
 	<img src="img/<%=rd.getRoomId()%>.PNG">
-	<button onclick="window.open('rinfo.do?id=<%=rd.getRoomId()%>','정보','width=450,height=550');">
+	<button onclick="window.open('rinfo.do?id=<%=rd.getRoomId()%>','정보','width=570,height=650');">
 		자세히</button>
 	</div>
 	<%
 		}if(rlist.size()==0){
-			%><h2>죄송합니다. 맞는 객실이 없습니다.</h2><%
+			%><h2>죄송합니다. 조건에 맞는 객실이 없습니다.</h2><%
 		}
 	}%>
 </div>			

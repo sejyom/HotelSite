@@ -38,7 +38,7 @@
 		<td><%= member.getPhoneNumber() %></td>
 		<td><%= member.getAddress() %></td>
 		<td>
-			<form action="../HotelWebProject/delete" method="post">
+			<form action="delete" method="post">
 				<input type="submit" value="회원삭제"></input>
 				<input type="hidden" name="id" value="<%= member.getId() %>">
 				

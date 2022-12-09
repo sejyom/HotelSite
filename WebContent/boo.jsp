@@ -1,19 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%> 
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width", initial-scale="1">
+<meta name="viewport" content="width=device-width" initial-scale="1">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/custom.css">
 <title>부가 시설</title>
-<style>
-	h3 { text-align: center; }
-</style>
+	<style>
+		h3 { text-align: center; }
+	</style>
 </head>
 <body>
-<%@ include file="top.jsp" %> <br>
+<section id="content">
 <h3 style="color:#EB6952">SSS 호텔 부가시설</h3> <br>
 <center>
 <img src= "img/Fitness.PNG" width="350"> </center>
@@ -65,6 +65,6 @@ SSS 스타일로 재해석한 한식 단품 메뉴도 제공됩니다. <br>
 레스토랑 운영 시간: 오후 3시 - 오후 11시<br></p>
 <br>
 <br>
-<%@ include file="footer.jsp" %>
+</section>
 </body>
 </html>

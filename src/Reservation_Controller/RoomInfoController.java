@@ -13,17 +13,19 @@ import javax.servlet.http.HttpSession;
 import Reservation.RoomDAO;
 import Reservation.RoomDTO;
 
-@WebServlet({ "/RoomInfoController", "/rinfo.do" })
+
+@WebServlet({ "/rinfo.do" })
 public class RoomInfoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession(true);
+		
 		String roomid = request.getParameter("id");
 		RoomDAO rdao=new RoomDAO();
 		try {
 			RoomDTO rInfo = rdao.selectRoom(roomid);
-			HttpSession session=request.getSession();
 			session.setAttribute("rinfo", rInfo);
 			request.getRequestDispatcher("roomInformation.jsp").forward(request, response);	
 			

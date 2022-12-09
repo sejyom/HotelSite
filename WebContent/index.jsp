@@ -1,8 +1,13 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
 	request.setCharacterEncoding("UTF-8");
-	String id = (String)session.getAttribute("id");
+	String cont = request.getParameter("cont");
+	String addr = request.getParameter("addr");
+	if(addr == null){
+		addr = "image.jsp";
+	}
 %>
 
 <!DOCTYPE html>
@@ -19,29 +24,32 @@ a {
 <title>SSS Hotel</title>
 </head>
  
-<body id="body">
+ <script>
+ /* 예약 페이지에서 날짜 선택 안했을 시 예외 처리 */
+	<%
+	String resu = request.getParameter("result");
+	if(resu!=null&&resu.equals("derror")){
+	   %>alert("날짜 형식이 잘못되었습니다.")<%   
+	}
+	if(resu!=null&&resu.equals("derror2")){
+	   %>alert("날짜를 선택하셔야 합니다.")<%   
+	}
+	%>
+ </script>
+ 
+<body> <!-- id="body" -->
 
 <header style="height: 5%; ">
 
-<%
-	if (id != null) {
-%>
-	<%@ include file="top2.jsp" %>
-<% 		
-	} else {
-%>
-	<%@ include file="top.jsp" %>
-	
-<%
-	}
-%>
+<%@ include file="top.jsp" %>
+
 </header>
 
 <section style="height: 70%;">
 <br>
 <br>
 <br>
-<%@ include file="image.jsp" %>
+<jsp:include page="<%= addr %>" />
 </section>
 <br>
 <br>

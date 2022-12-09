@@ -5,7 +5,7 @@
 <html>
 <head>
 <title>룸 정보</title>
-<link rel="stylesheet" href="imsi.css?ver0.2">
+<link rel="stylesheet" href="css/imsi.css?ver0.2">
 </head>
 <body>
 <div id="info">
@@ -22,7 +22,7 @@
 	</div>
 	<div class="desc">
 	<button onclick="window.close()">취소</button>
-	<button onclick="window.open('rinfoP.do?id=<%=rinfo.getRoomId()%>');window.close()">결제하기</button>
+	<button onclick="window.opener.location.href='rinfoP.do?id=<%=rinfo.getRoomId()%>';window.close()">예약하기</button>
 	</div><%
 %>
 </div>

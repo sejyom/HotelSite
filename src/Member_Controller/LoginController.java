@@ -1,7 +1,7 @@
 package Member_Controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+// import java.io.PrintWriter;
 import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
@@ -30,6 +30,7 @@ public class LoginController extends HttpServlet {
 		HttpSession session = request.getSession();
 		try {
 			vo = dao.checkDB(request.getParameter("id"), request.getParameter("password"));
+			System.out.println(vo.getId());
 			if (vo.getId() != null) {
 				session.setAttribute("id", vo.getId());
 				session.setAttribute("name", vo.getName());
@@ -41,13 +42,15 @@ public class LoginController extends HttpServlet {
 				RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
 				dispatcher.forward(request, response);
 			} else {
-				RequestDispatcher dispatcher = request.getRequestDispatcher("errorPage.jsp?hidden=loginError");
+				RequestDispatcher dispatcher = request.getRequestDispatcher("errorPage.jsp?hidden=loginError_fail");
 				dispatcher.forward(request, response);
 			}
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			RequestDispatcher dispatcher = request.getRequestDispatcher("errorPage.jsp?hidden=loginError_duplication");
+			dispatcher.forward(request, response);
 		}
 	}
 

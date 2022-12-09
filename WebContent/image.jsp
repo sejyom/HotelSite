@@ -29,7 +29,7 @@
 }
 </script>
 <body>
- 	<center>
+	<center>
 		<div>
 		  <img class="slide1" src="img/001.jpeg" height="500" width="1000">
 		  <img class="slide1" src="img/002.jpeg" height="500" width="1000">
@@ -37,7 +37,7 @@
 		  <img class="slide1" src="img/004.jpeg" height="500" width="1000">
 		</div>
 	</center>  
-</div>
+</div> 
 </body>
 </html>
 

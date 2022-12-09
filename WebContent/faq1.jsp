@@ -10,7 +10,6 @@
 		h1 { text-align: center; }
 	</style>
 <body>
-<%@ include file="top.jsp" %> <br>
 <h1 style="color:black"> 자주하는 질문 FAQ</h1> <br>
 <br>
 <h3 style="text-align:left; color:#483D8B; margin-left: 40px;">
@@ -25,6 +24,5 @@
 <br>
 </p>
 
-<%@ include file="footer.jsp" %>
 </body>
 </html>

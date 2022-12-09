@@ -10,7 +10,6 @@
 		h1 { text-align: center; }
 	</style>
 <body>
-<%@ include file="top.jsp" %> <br>
 <h1 style="color:black"> 자주하는 질문 FAQ</h1> <br>
 <br>
 <h3 style="text-align:left; color:#483D8B; margin-left: 40px;">
@@ -24,7 +23,5 @@
 호텔 객실 내 미니바에 별도로 구매 가능한 일회용 세면도구(칫솔, 치약, 면도기 등)가 비치되어 있습니다. <br>
 <br>
 </p>
-
-<%@ include file="footer.jsp" %>
 </body>
 </html>

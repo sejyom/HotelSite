@@ -4,20 +4,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width", initial-scale="1">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/custom.css">
 <title>문의하기</title>
+<h3 style="color:#EB6952">Q&A 문의하기</h3> <br>
 <style type="text/css">
 	a, a:hover {
 		color: #000000;
 		text-decoration: none;
 	}
+	h3 { text-align: center; }
 </style>
+<br> 
 </head>
 <body>
-<br>
-<h4>Q&amp;A 문의하기</h4> 
 	<div class="container">
 		<div class="row">
 			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">

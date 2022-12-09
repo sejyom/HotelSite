@@ -12,6 +12,10 @@
 	justify-content: space-between;
 	text-align: center;
 }
+.bottom{
+    color:black;
+    text-decoration:none;
+}
 </style>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -61,8 +65,8 @@
 <div class="item">
 	<h4>PRIVACY</h4>
 	<span>
-		<a href="notice2.jsp">개인정보처리방침</a><br>
-		<a href="">이용약관</a>
+		<a href="index.jsp?addr=notice2.jsp" class="bottom">개인정보처리방침</a><br>
+		<a href="index.jsp?addr=agreement.jsp" class="bottom">이용약관</a>
 	</span>
 </div>
 </footer>

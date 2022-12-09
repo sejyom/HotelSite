@@ -10,7 +10,6 @@
 		h1 { text-align: center; }
 	</style>
 <body>
-<%@ include file="top.jsp" %> <br>
 <h1 style="color:black"> 자주하는 질문 FAQ</h1> <br>
 <br>
 <h3 style="text-align:left; color:#483D8B; margin-left: 40px;">
@@ -24,6 +23,5 @@
 취소 및 변경은 예약 담당 부서로 연락 부탁 드립니다. (031-369-7700)<br>
 <br>
 </p>
-<%@ include file="footer.jsp" %>
 </body>
 </html>

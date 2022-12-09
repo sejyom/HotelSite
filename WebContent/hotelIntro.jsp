@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%> 
+<%
+	String title="hotelIntro.jsp";
+	session.setAttribute("title", title);
+%>      
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,12 +12,9 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/custom.css">
 <title>SSS HOTEL</title>
-
 </head>
 <body>
-<%@ include file="top.jsp" %>
-</head>
-<body>
+<section id="content">
 <center>
 <br>
 <br>
@@ -53,6 +54,6 @@ SIMMONS사에서 제작한 <br>
 특별 제작된 필로우 톱 매트리스가 깔려 침구가 몸을 감싸는 듯한 포근함을 드립니다</p>
 <br>
 </center>
-<%@ include file="footer.jsp" %>
+</section>
 </body>
 </html>
