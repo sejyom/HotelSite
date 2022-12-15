@@ -1,5 +1,4 @@
 .filter{
-	background-color:#868e96;
 	padding: 1rem;
 	margin: 1rem;
 }
@@ -15,7 +14,7 @@
 	background-color:#e9ecef;
 	width: 100px;
 }
-.room>img{
+img{
 	display:inline-block;
 	width:auto !important;
 	max-width:100%;

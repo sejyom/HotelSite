@@ -31,7 +31,7 @@ public class ModifyProfile extends HttpServlet {
 			System.out.println("modifyProfile   | id: " + (String)session.getAttribute("id") + ", name: " + request.getParameter("name") + ", email: " + request.getParameter("email") 
 			+ ", phoneNumber: " + request.getParameter("phoneNumber") + ", address: " + request.getParameter("address"));
 			System.out.println("------------------------------------------------------------------------");
-			RequestDispatcher dispatcher = request.getRequestDispatcher("myPage/myPage.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp?addr=myPage.jsp");
 			dispatcher.forward(request, response);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

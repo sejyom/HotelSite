@@ -34,7 +34,7 @@ public class ResvListController extends HttpServlet {
 			}
 			session.setAttribute("paylist", payList);
 			session.setAttribute("resvlist", resvList);
-			request.getRequestDispatcher("index.jsp?addr=reserlist.jsp").forward(request, response);
+			request.getRequestDispatcher("index.jsp?cont=myPage.jsp&addr=reserlist.jsp").forward(request, response);
 			
 		} catch (SQLException e) {
 			e.printStackTrace();

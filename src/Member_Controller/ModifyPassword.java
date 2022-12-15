@@ -37,7 +37,7 @@ public class ModifyPassword extends HttpServlet {
 				System.out.println("modifyPassword   | id: " + (String)session.getAttribute("id") + ", password: " + request.getParameter("password") + ", new_password: " + request.getParameter("new_password"));
 				System.out.println("------------------------------------------------------------------------");
 
-				RequestDispatcher dispatcher = request.getRequestDispatcher("myPage/myPage.jsp");
+				RequestDispatcher dispatcher = request.getRequestDispatcher("myPage.jsp");
 				dispatcher.forward(request, response);
 			} else {
 				RequestDispatcher dispatcher = request.getRequestDispatcher("errorPage.jsp?hidden=modifyPassword");

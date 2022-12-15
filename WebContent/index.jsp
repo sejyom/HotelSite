@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
@@ -29,32 +28,34 @@ a {
 	<%
 	String resu = request.getParameter("result");
 	if(resu!=null&&resu.equals("derror")){
+		
 	   %>alert("날짜 형식이 잘못되었습니다.")<%   
 	}
 	if(resu!=null&&resu.equals("derror2")){
 	   %>alert("날짜를 선택하셔야 합니다.")<%   
 	}
+	
+	
+	
+	if(resu!=null&&resu.equals("ook")){
+		%>alert("상품이 등록되었습니다.")<%	
+	}
+	if(resu!=null&&resu.equals("ddel")){
+		%>alert("상품이 삭제되었습니다.")<%   
+	}
 	%>
  </script>
  
-<body> <!-- id="body" -->
-
+<body style="margin: 0px;">
 <header style="height: 5%; ">
-
 <%@ include file="top.jsp" %>
-
 </header>
 
 <section style="height: 70%;">
-<br>
-<br>
-<br>
 <jsp:include page="<%= addr %>" />
 </section>
-<br>
-<br>
-<br>
-<footer style="margin-left: 200px; margin-right: 200px; height:10%; ">
+
+<footer style="margin: 100px 200px 0 200px; height:10%; ">
 <%@ include file="footer.jsp" %>
 </footer>
 </body>

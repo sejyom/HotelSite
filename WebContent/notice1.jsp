@@ -7,10 +7,13 @@
 <title>notice1</title>
 </head>
 	<style>
-		h1 { text-align: center; }
+		h2 { 
+		font-size:30px; color:#EB6952; text-align:center;
+		line-height:1; font-size:30px; color: #EB6952; padding: 30px;
+		}
 	</style>
 <body>
-<h1 style="color:black"> 공지사항</h1> <br>
+<h1 style="color:#EB6952"> 공지사항</h1> <br>
 <br>
 <h3 style="text-align:left; color:#483D8B; margin-left: 40px;">
 호텔 체크 아웃시간 안내 2022년 3월 11일

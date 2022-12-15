@@ -1,16 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	String id = (String) session.getAttribute("id");
-	
-   	String manager = "0";
-  	String name = null;
-  	try {
-   		manager = (String)session.getAttribute("manager");
-   		name = (String)session.getAttribute("name");
-  	} catch (Exception e) {
-  		e.printStackTrace();
-  	}
+   String id = (String) session.getAttribute("id");
+   
+     String manager = "0";
+     String name = null;
+     try {
+         manager = (String)session.getAttribute("manager");
+         name = (String)session.getAttribute("name");
+     } catch (Exception e) {
+        e.printStackTrace();
+     }
 %>  
 <!DOCTYPE html>
 <html>
@@ -20,6 +20,9 @@
 #header {
    display: flex;
    justify-content: space-between;
+}
+.nav_logo{
+   padding: 30px 15px;
 }
 .faq {
    border-width: medium;
@@ -85,47 +88,46 @@ li a:hover{
    </span>
    <span style="text-align: right;">
    <%
-   		if(name == null) {
-   			%>
-   			<a href="loginForm.jsp" style="color:black;">로그인</a>
-      		<a href="joinForm.jsp" style="color:black;">회원가입</a>
-   			<%
-   		} else {
-   			%>
-   			<a href="signOut" style="color:black;">로그아웃</a>
-   			<%
-   			if(manager.equals("0")) {
-   			 	// user
-   			 %>
-   			 	<a href="index.jsp?addr=myPage.jsp" style="color:black;">마이페이지</a><br>
-   			 	<%= id + "님" %>
-   			 <%
-   			} else {
-   			    // manager
-   			%>
-   			    <a href="index.jsp?addr=managerPage.jsp" style="color:black;">마이페이지</a><br>
-   			    관리자님
-			<%
-   			}
-   		}
+         if(name == null) {
+            %>
+            <a href="loginForm.jsp" style="color:black;">로그인</a>
+            <a href="joinForm.jsp" style="color:black;">회원가입</a>
+            <%
+         } else {
+            %>
+            <a href="signOut" style="color:black;">로그아웃</a>
+            <%
+            if(manager.equals("0")) {
+                // user
+             %>
+                <a href="index.jsp?addr=myPage.jsp" style="color:black;">마이페이지</a><br>
+                <%= id + "님" %>
+             <%
+            } else {
+                // manager
+            %>
+                <a href="index.jsp?addr=managerPage.jsp" style="color:black;">마이페이지</a><br>
+                관리자님
+         <%
+            }
+         }
    %>
    </span>
 </header>
 </section>
-<div class="nav_logo">
+<div class="nav_logo" >
 <a href="index.jsp">
 <img src="img/logo_img.png" style="width: 150px; height: 150px;" />
 <img src="img/logo_text01.png "style="height: 150px; width: 450px;" />
 </a>
 </div>
-<br>
-<br>
 <ul id="depth0">
 
-   <li class="nav_title"><a href="#">SSS호텔</a>
+   <li class="nav_title"><a href="#">호텔안내</a>
       <ul class="depth1">
       <li><a href="index.jsp?addr=hotelIntro.jsp" class="navbar1">호텔소개</a></li>
       <li><a href="index.jsp?addr=notice.jsp" class="navbar1">공지사항</a></li>
+      <li><a href="index.jsp?addr=boo.jsp" class="navbar1">편의시설 안내</a></li>
       <li><a href="index.jsp?addr=map.jsp" class="navbar1">오시는 길</a></li>
       </ul>
    </li>
@@ -137,16 +139,17 @@ li a:hover{
       </ul>
    </li>
       
-   <li class="nav_title"><a href="#">편의시설</a>
+   <li class="nav_title"><a href="#">상품 및 프로모션</a>
       <ul class="depth1">
-      <li><a href="index.jsp?addr=boo.jsp" class="navbar1">편의시설 안내</a></li>
+      <li><a href="index.jsp?addr=promotion.jsp" class="navbar1">프로모션</a></li>
+      <li><a href="dslist.do" class="navbar1">상품</a></li>
       </ul>
    </li>
    
    <li class="nav_title"><a href="#">문의하기</a>
       <ul class="depth1">
       <li><a href="index.jsp?addr=qna.jsp" class="navbar1">문의하기</a></li>
-      <li><a href="index.jsp?addr=inquiry.jsp?id=<%= id %>" class="navbar1">내 문의</a></li>
+      <li><a href="index.jsp?addr=myInquiry.jsp" class="navbar1">내 문의</a></li>
       <li><a href="index.jsp?addr=faq.jsp" class="navbar1">자주하는 질문</a></li>
       </ul>
    </li>   

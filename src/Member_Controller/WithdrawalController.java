@@ -30,7 +30,7 @@ public class WithdrawalController extends HttpServlet {
 		MemberVO vo = new MemberVO();
 		HttpSession session = request.getSession();
 		RequestDispatcher dispatcher;
-		String  id = (String)session.getAttribute("id");
+		String id = (String)session.getAttribute("id");
 		String pwd = request.getParameter("password");
 		
 		try {

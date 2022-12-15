@@ -7,10 +7,13 @@
 <title>notice2</title>
 </head>
 	<style>
-		h1 { text-align: center; }
+		h2 { 
+		font-size:30px; color:#EB6952; text-align:center;
+		line-height:1; font-size:30px; color: #EB6952; padding: 30px;
+		}
 	</style>
 <body>
-<h1 style="color:black"> 공지사항</h1> <br>
+<h2 style="color:#EB6952"> 공지사항</h2> <br>
 <br>
 <h3 style="text-align:left; color:#483D8B; margin-left: 40px;">
 SSS호텔 개인정보처리방침 개정안내 2022년 6월 1일

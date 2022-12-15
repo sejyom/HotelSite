@@ -11,7 +11,7 @@
 </head>
 <body>
 <%
-if (hidden.equals("loginError_fail")) {
+if (hidden.equals("loginError_fail") || hidden.equals("findID") || hidden.equals("findPW")) {
 %>
 <script>
 	alert("입력하신 정보와 일치하는 회원 정보가 없습니다.");
@@ -27,6 +27,13 @@ if (hidden.equals("loginError_fail")) {
 %>
 <script>
 	alert("비밀번호를 확인해 주세요.");
+	history.back();
+</script>
+<%
+} else if (hidden.equals("insertError")) {
+%>
+<script>
+	alert("insert error.");
 	history.back();
 </script>
 <%

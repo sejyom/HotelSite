@@ -1,16 +1,17 @@
 package Review;
 
 public class ReviewVO {
-	private String id;
+	private String reserve_id;
 	private String user_id;
 	private String room_id;
-	private String star;
+	private String comment;
+	private int rating;
 	
-	public String getId() {
-		return id;
+	public String getReserve_id() {
+		return reserve_id;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setReserve_id(String review_id) {
+		this.reserve_id = review_id;
 	}
 	public String getUser_id() {
 		return user_id;
@@ -24,10 +25,16 @@ public class ReviewVO {
 	public void setRoom_id(String room_id) {
 		this.room_id = room_id;
 	}
-	public String getStar() {
-		return star;
+	public String getComment() {
+		return comment;
 	}
-	public void setStar(String star) {
-		this.star = star;
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+	public int getRating() {
+		return rating;
+	}
+	public void setRating(int rating) {
+		this.rating = rating;
 	}
 }

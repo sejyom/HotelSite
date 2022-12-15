@@ -5,18 +5,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width", initial-scale="1">
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/custom.css">
 <title>문의하기</title>
-<h3 style="color:#EB6952">Q&A 문의하기</h3> <br>
+<h2>Q&A 문의하기</h2>
 <style type="text/css">
 	a, a:hover {
 		color: #000000;
 		text-decoration: none;
 	}
-	h3 { text-align: center; }
-</style>
-<br> 
+	h2 { 
+	font-size:30px; color:#EB6952; text-align:center;
+	line-height:1; font-size:30px; color: #EB6952; padding: 30px;
+	}
+	.table{ width: 850px; height: 170px; margin:auto; } 
+	.qnaB{margin: 20px 210px 0 0;}
+	.qnaButton{
+	width:95px; height:50px; background:#FF9761; 
+	font-size:18px; color:#fff; float:right;
+	}
+	.row {padding-bottom:100px;}
+</style> 
 </head>
 <body>
 	<div class="container">
@@ -24,11 +31,11 @@
 			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
 				<thead>
 					<tr>
-						<th style="background-color: #eeeeee; text-align: center;">번호</th>
-						<th style="background-color: #eeeeee; text-align: center;">답변여부</th>
-						<th style="background-color: #eeeeee; text-align: center;">내용</th>
-						<th style="background-color: #eeeeee; text-align: center;">아이디</th>
-						<th style="background-color: #eeeeee; text-align: center;">등록일자</th>
+						<th style="background-color: #FFE8D2; text-align: center; height:45px;">번호</th>
+						<th style="background-color: #FFE8D2; text-align: center;">답변여부</th>
+						<th style="background-color: #FFE8D2; text-align: center;">내용</th>
+						<th style="background-color: #FFE8D2; text-align: center;">아이디</th>
+						<th style="background-color: #FFE8D2; text-align: center;">등록일자</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -57,7 +64,9 @@
 						</tr>
 					</tbody>
 			</table>
-			<a href="write.jsp" class="btn btn-primary pull-right">작성하기</a>
+			<div class="qnaB">
+				<button class="qnaButton" style="border:0; outline: 0;"><a href="write.jsp">작성하기</a></button>
+			</div>
 		</div>
 	</div>
 </body>

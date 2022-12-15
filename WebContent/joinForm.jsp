@@ -64,20 +64,20 @@ function test() {
 <ul>
 <form method="post" action="insert">
 	아이디<br>
-	<li><input type="text" name="id"></li>
+	<li><input type="text" name="id" required></li>
 	비밀번호<br>
-	<li><input type="password" name="password" id="password"></li>
+	<li><input type="password" name="password" id="password" required></li>
 	<!-- required onchange="validatePassword()" -->
 	<!-- 비밀번호 확인: <input type="password" id="confirm_password"><br> -->
 	이름<br>
-	<li><input type="text" name="name"></li>
+	<li><input type="text" name="name" required></li>
 	이메일<br>
-	<li><input type="email" name="email"></li>
+	<li><input type="email" name="email" required></li>
 	전화번호<br>
-	<li><input type="text" name="phoneNumber"></li>
+	<li><input type="text" name="phoneNumber" required></li>
 	<li>주소<br>
 	<input type="text" name="address" id="address" readonly></li>
-	<li><button type="submit">회원가입</button></li>
+	<li><button type="submit" style="border: 0; outline: 0;">회원가입</button></li>
 </ul>
 </form>
 </section>

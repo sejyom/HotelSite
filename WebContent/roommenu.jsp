@@ -21,30 +21,35 @@ if(start==null){
 %>
 </script>
 </head>
+<style>
+	.menubar{ padding:50px 0 20px 0;}
+</style>
 <body>
-<div class="filter">
-<form action="rlist.do" method="get" >
-	<div class="child">[객실 필터]
-	시작일 :
-	<input type="date" id="day" value="<%=start%>" name="startd" min="<%=start%>" max="2023-04-30" />
-	종료일 :
-	<input type="date" name="endd" value="<%=end%>" min="<%=end%>" max="2023-04-30" />
-	최대인원 :
-		<select id="person" name="condp">
-			<option value="0">인원자유</option>
-			<option value="3">3명 이상</option>
-			<option value="6">6명 이상</option>
-		</select>
-	뷰 옵션 :
-		<select id="view" name="condv">
-			<option value="info">뷰자유</option>
-			<option value="mount">마운틴</option>
-			<option value="city">시티뷰</option>
-			<option value="ocean">오션뷰</option>
-		</select>
-		<input type="submit" value="검색하기"/>
+<div class="menubar">
+	<div class="filter" style="background-color:rgb(252, 218, 180); ">
+	<form action="rlist.do" method="get" >
+		<div class="child">[객실 필터]
+		시작일 :
+		<input type="date" id="day" value="<%=start%>" name="startd" min="<%=start%>" max="2023-04-30" />
+		종료일 :
+		<input type="date" name="endd" value="<%=end%>" min="<%=end%>" max="2023-04-30" />
+		최대인원 :
+			<select id="person" name="condp">
+				<option value="0">인원자유</option>
+				<option value="3">3명 이상</option>
+				<option value="6">6명 이상</option>
+			</select>
+		뷰 옵션 :
+			<select id="view" name="condv">
+				<option value="info">뷰자유</option>
+				<option value="mount">마운틴</option>
+				<option value="city">시티뷰</option>
+				<option value="ocean">오션뷰</option>
+			</select>
+			<input type="submit" value="검색하기"/>
+		</div>
+	</form>
 	</div>
-</form>
 </div>
 </body>
 </html>

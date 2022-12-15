@@ -13,13 +13,19 @@
 <link rel="stylesheet" href="css/custom.css">
 <title>객실 소개</title>
 	<style>		
-		h3 { text-align: center; }
-		/*
-		.imgroom { float:left; margin-right:100px; clear:both;}
-		*/
-		.roomIntro{ justify-content: center; }
-		.view { padding-bottom:100px; }
-		.room_img { float:left; padding-right:20px;}
+		h2 { 
+		font-size:30px; color:#EB6952; text-align:center;
+		line-height:1; font-size:30px; color: #EB6952;
+		color:#EB6952; padding: 30px;
+		}
+		.roomIntro{ 
+			justify-content: center;
+			text-align: center;
+		 }
+		.view { 
+			padding-top:100px;
+			padding-bottom:100px;
+		 }
 		.room_name { font-size:32px; font-weight:bold;}
 		.room_text { font-size:17px;}
 		.room_sub { font-size:15px; }
@@ -28,8 +34,7 @@
 	
 </head>
 <body>
-	<h3 style="color:#EB6952">객실 소개</h3> <br>	
-	<br>
+	<h2>객실 소개</h2> <br>	
 <div class="roomIntro">	
 	<div class="view">		
 		<img src= "img/마운틴뷰1.PNG" class="room_img" width="470" height="300">
@@ -44,22 +49,24 @@
 	 	<p class="price">
 	 	230,000 KRW (1박)</p>
 	</div>
-
-	<div class="view">		
-		<img src= "img/마운틴뷰2.PNG" class="room_img" width="470" height="300">
-		<p class="room_name">MOUNTAIN 2</p><br>
-	 	<p class="room_text">
-	 	웅장한 산의 절경을 한눈에 담을 수 있는 SSS 호텔에서 가장 넓은 객  <br>
-	 	실로 아늑한 거실과 더블 베드, 트윈 베드를 포함한 2개의 침실이 갖 <br>
-	 	추어져 있으며, 다이닝 공간을 포함한 별도의 바 시설 또한 구비되어 <br>
-	 	있습니다. 마운틴뷰 호텔에서 자연의 아름다움을 느껴보세요.</p> <br>
-	 	<p class="room_sub">
-	 	- 기준 인원 : 4명 <br>
-	 	- 더블 배드 2개</p>
-	 	<p class="price">
-	 	420,000 KRW (1박)</p>
+<hr style="border: solid 3px orange; width: 50%;">
+	<div class="view">
+			<img src= "img/마운틴뷰2.PNG" class="room_img" width="470" height="300">
+		<div width="40%">
+			<p class="room_name">MOUNTAIN 2</p><br>
+		 	<p class="room_text">
+		 	웅장한 산의 절경을 한눈에 담을 수 있는 SSS 호텔에서 가장 넓은 객  <br>
+		 	실로 아늑한 거실과 더블 베드, 트윈 베드를 포함한 2개의 침실이 갖 <br>
+		 	추어져 있으며, 다이닝 공간을 포함한 별도의 바 시설 또한 구비되어 <br>
+		 	있습니다. 마운틴뷰 호텔에서 자연의 아름다움을 느껴보세요.</p> <br>
+		 	<p class="room_sub">
+		 	- 기준 인원 : 4명 <br>
+		 	- 더블 배드 2개</p>
+		 	<p class="price">
+		 	420,000 KRW (1박)</p>
+	 	</div>
 	</div>
-	
+<hr style="border: solid 3px orange; width: 50%;">
 	<div class="view">		
 		<img src= "img/시티뷰1.PNG" class="room_img" width="470" height="300">
 		<p class="room_name">CITY 1</p><br>
@@ -74,7 +81,7 @@
 	 	<p class="price">
 	 	190,000 KRW (1박)</p>
 	</div>	
-	
+<hr style="border: solid 3px orange; width: 50%;">
 	<div class="view">		
 		<img src= "img/시티뷰2.PNG" class="room_img" width="470" height="300">
 		<p class="room_name">CITY 2</p><br>
@@ -89,7 +96,7 @@
 	 	<p class="price">
 	 	350,000 KRW (1박)</p>
 	</div>	
-	
+<hr style="border: solid 3px orange; width: 50%;">
 	<div class="view">		
 		<img src= "img/한강뷰1.PNG" class="room_img" width="470" height="300">
 		<p class="room_name">HANRIVER 1</p><br>
@@ -104,7 +111,7 @@
 	 	<p class="price">
 	 	250,000 KRW (1박)</p>
 	</div>	
-	
+<hr style="border: solid 3px orange; width: 50%;">
 	<div class="view">		
 		<img src= "img/한강뷰2.PNG" class="room_img" width="470" height="300">
 		<p class="room_name">HANRIVER 2</p><br>

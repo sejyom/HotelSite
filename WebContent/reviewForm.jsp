@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="Member.MemberVO, Reservation.*, Review.*" %>
-
+<%
+	String addr = request.getParameter("addr");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,11 +49,15 @@
 <body>
 <%
 	MemberVO mem = new MemberVO();
-	ReserveDTO rsv = new ReserveDTO();
+	ReserveDTO rsv = (ReserveDTO)session.getAttribute("rsvDTO");
+	String user_id = (String)session.getAttribute("id");
+	
 %>
 
 <table id="review">
+<form action="insert_review" method="post">
 <tr>
+	<td>예약번호</td>
 	<td>고객명</td>
 	<td>예약일자</td>
 	<td>이용하신 방</td>
@@ -59,27 +65,32 @@
 </tr>
 
 <tr>
-	<td><%= mem.getId() %></td>
+<input type="hidden" name="user_id" value="<%= user_id %>" />
+<input type="hidden" name="rsv_id" value="<%= rsv.getResvId() %>" />
+<input type="hidden" name="room_id" value="<%= rsv.getRoomId() %>" />
+	<td><%= rsv.getResvId() %>
+	<td><%= user_id %></td>
 	<td><%= rsv.getResvStart() %> ~ <%= rsv.getResvEnd() %></td>
 	<td><%= rsv.getRoomId() %></td>
 	
 	<td>
-	<form id="star">
-	    <fieldset>
+	<span id="star">
+	    <fieldset >
 	        <input type="radio" name="rating" value="5" id="rate1"><label for="rate1">⭐</label>
 	        <input type="radio" name="rating" value="4" id="rate2"><label for="rate2">⭐</label>
 	        <input type="radio" name="rating" value="3" id="rate3"><label for="rate3">⭐</label>
 	        <input type="radio" name="rating" value="2" id="rate4"><label for="rate4">⭐</label>
 	        <input type="radio" name="rating" value="1" id="rate5"><label for="rate5">⭐</label>
 	    </fieldset>
+	</span>
 	</td>
 </tr>
 <tr>
-	<td colspan="4"><textarea cols="80" rows="15" required></textarea></td>
-	</form>
+	<td colspan="4"><textarea name="comment" cols="80" rows="15" required></textarea></td>
 </tr>
 
 </table>
 <button type="submit">작성</button>
+</form>
 </body>
 </html>

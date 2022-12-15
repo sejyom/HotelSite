@@ -25,10 +25,11 @@ public class MemberDAO {
 		JDBCutil.close(pstmt, conn);
 	}
 	
-	public MemberVO selectMember() throws SQLException {
+	public MemberVO selectMember(String id) throws SQLException {
+		// 유저 정보 출력
 		conn = JDBCutil.getConnection();
 		MemberVO mem = new MemberVO();
-		pstmt = conn.prepareStatement("select * from tbl_member;");
+		pstmt = conn.prepareStatement("select * from tbl_member where id='" + id + "';");
 		ResultSet rs = pstmt.executeQuery();
 		
 		while(rs.next()) {
@@ -45,6 +46,7 @@ public class MemberDAO {
 	}
 	
 	public MemberVO checkDB(String id, String password) throws SQLException {
+		// 디비에 있는지 체크
 		conn = JDBCutil.getConnection();
 		MemberVO mem = new MemberVO();
 		
@@ -64,6 +66,7 @@ public class MemberDAO {
 	}
 	
 	public MemberVO checkID(String id) throws SQLException {
+		// 디비에 있는지 체크
 		conn = JDBCutil.getConnection();
 		MemberVO mem = new MemberVO();
 		
@@ -83,6 +86,7 @@ public class MemberDAO {
 	}
 	
 	public void updateMember(String id, String name, String email, String phoneNumber, String address) throws SQLException {
+		// 회원 정보 수정
 		conn = JDBCutil.getConnection();
 		pstmt = conn.prepareStatement("update tbl_member set name='"+ name +"', email='" + email + "', phoneNumber='" + phoneNumber + "', address='" + address + "' where id='" + id + "';");
 		pstmt.executeUpdate();
@@ -90,6 +94,7 @@ public class MemberDAO {
 	}
 	
 	public void updatePassword(String id, String new_password) throws SQLException {
+		// 비밀번호 변경
 		conn = JDBCutil.getConnection();
 		pstmt = conn.prepareStatement("update tbl_member set password='" + new_password + "' where id='" + id + "';");
 		pstmt.executeUpdate();
@@ -97,6 +102,7 @@ public class MemberDAO {
 	}
 	
 	public void deleteMember(String id) throws SQLException {
+		// 회원 탈퇴
 		conn = JDBCutil.getConnection();
 		pstmt = conn.prepareStatement("delete from tbl_member where id='" + id + "';");
 		pstmt.executeUpdate();
@@ -104,6 +110,7 @@ public class MemberDAO {
 	}
 	
 	public ArrayList<MemberVO> selectMemberList() throws SQLException {
+		// 회원 리스트 출력
 		conn = JDBCutil.getConnection();
 		pstmt = conn.prepareStatement("select * from tbl_member;");
 		rs = pstmt.executeQuery();
@@ -123,5 +130,49 @@ public class MemberDAO {
 		}
 		JDBCutil.close(rs, pstmt, conn);
 		return memberList;
+	}
+	
+	public String findID(MemberVO vo) throws SQLException {
+		// 아이디 찾기
+		conn = JDBCutil.getConnection();
+		pstmt = conn.prepareStatement("select id from tbl_member where name=? and email=?;");
+		String id;
+		
+		pstmt.setString(1, vo.getName());
+		pstmt.setString(2, vo.getEmail());
+		
+	    rs = pstmt.executeQuery();
+		
+		if(rs.next())
+			id = rs.getString("id");
+		else
+			id = null;
+		
+		System.out.println("findID   | name: " + vo.getName() + ", email: " + vo.getEmail() + ", userId: " + id);
+		JDBCutil.close(rs, pstmt, conn);
+		
+		return id;
+	}
+	
+	public String findPW(MemberVO vo) throws SQLException {
+		// 비밀번호 찾기
+		conn = JDBCutil.getConnection();
+		pstmt = conn.prepareStatement("select password from tbl_member where id=? and name=? and email=?;");
+		String password = "";
+
+		pstmt.setString(1, vo.getId());
+		pstmt.setString(2, vo.getName());
+		pstmt.setString(3, vo.getEmail());
+		
+		rs = pstmt.executeQuery();
+		
+		if(rs.next())
+			password = rs.getString("password");
+		else
+			password = null;
+		
+//		System.out.println("findPW   | name: " + vo.getName() + ", email: " + vo.getEmail() + ", userPassword: " + password);
+		JDBCutil.close(rs, pstmt, conn);
+		return password;
 	}
 }

@@ -6,7 +6,7 @@
 	String addr = "myPage.jsp";
 	String cont = request.getParameter("cont");
 	if (cont == null)
-		cont = "modifyProfile.jsp";
+		cont = "myInformation.jsp";
 %>
 <!DOCTYPE html>
 <html>
@@ -14,6 +14,13 @@
 <style>
 a {
 	text-decoration: none;
+}
+#content {
+	width: 100%;
+	align: center;
+}
+.p{
+	display: inline-block;
 }
 </style>
 <meta charset="UTF-8">
@@ -23,10 +30,14 @@ a {
 <body>
 	
 	<div id="content">
-		<jsp:include page="userNav.jsp" flush="true">
-			<jsp:param name="id" value="<%= id %>" />
-		</jsp:include>
-		<jsp:include page="<%= cont %>" />
+		<div class="p">
+			<jsp:include page="userNav.jsp" flush="true">
+				<jsp:param name="id" value="<%= id %>" />
+			</jsp:include>
+		</div>
+		<div class="p" style="margin-left: 250px;">
+			<jsp:include page="<%= cont %>" />
+		</div>
 	</div>
 	
 </body>

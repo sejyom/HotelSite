@@ -7,10 +7,13 @@
 <title>notice1</title>
 </head>
 	<style>
-		h1 { text-align: center; }
+		h2 { 
+		font-size:30px; color:#EB6952; text-align:center;
+		line-height:1; font-size:30px; color: #EB6952; padding: 30px;
+		}
 	</style>
 <body>
-<h1 style="color:black"> 자주하는 질문 FAQ</h1> <br>
+<h2 style="color:#EB6952"> 자주하는 질문 FAQ</h2> <br>
 <br>
 <h3 style="text-align:left; color:#483D8B; margin-left: 40px;">
 [ 예약취소 ] 예약완료 후 취소규정에 대해 알고 싶습니다.
