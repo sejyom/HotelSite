@@ -1,9 +1,8 @@
 package Member_Controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,10 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import Member.MemberDAO;
 import Member.MemberVO;
-
-/**
- * Servlet implementation class InsertController
- */
 
 @WebServlet("/insert")
 public class InsertController extends HttpServlet {
@@ -58,8 +53,10 @@ public class InsertController extends HttpServlet {
 			dao.insertMember(vo);
 			System.out.println("join   | id: " + id + ", password: " + password + ", manager: " + manager + ", address: " + address);
 			System.out.println("------------------------------------------------------------------------");
-			RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
-			dispatcher.forward(request, response);
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter writer = response.getWriter();
+			writer.println("<script>alert('회원가입이 완료되었습니다.'); location.href='index.jsp';</script>");
+			writer.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

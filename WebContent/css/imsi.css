@@ -1,0 +1,37 @@
+.filter{
+	padding: 1rem;
+	margin: 1rem;
+}
+.rooms{
+	display: flex;
+	flex-direction: row;
+}
+.room{
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	margin: 1rem;
+	background-color:#E4EFFD;
+	width: 150px;
+}
+img{
+	display:inline-block;
+	width:auto !important;
+	max-width:100%;
+	height:auto !important;
+}
+#info{
+	display: flex;
+	flex-direction: column;
+	background-color:#E4EFFD;
+	padding: 2rem;	
+	width:600px;
+	height:580px;
+}
+.desc{
+	display: flex;
+	flex-direction: row;
+}
+
+	
+

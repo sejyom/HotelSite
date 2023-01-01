@@ -8,11 +8,14 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/custom.css">
 <title>문의하기 작성폼</title>
-<br>
-<h4>문의하기</h4>
+<%@ include file="top.jsp" %>
+<style>
+	h3 { text-align: center; }
+</style>
 </head>
 <body>
-
+<h3 style="color:#EB6952">Q&amp;A  문의하기</h3> <br>
+<center>
 	<!-- 글 작성 양식 -->
 	<div class="container">
 		<div class="row">
@@ -22,7 +25,7 @@
 						<tr>
 							<th colspan="2" style="background-color: #eeeeee; text-align: center;">문의사항</th>
 						</tr>
-				</thead>
+					</thead>
 					<tbody>
 						<table border="1" width=950 bordercolor="gray" cellspacing="2">
       				    <form action="writeTable.jsp" method="post">
@@ -50,14 +53,16 @@
                			 	<th>휴대전화</th>
 			                <td><input type="text" class="form-control" name="number"></td>
 			            </tr>
+			            </form>
 					</tbody>
 				</table>			
 				<div class="text-center">
 				<br>
 				<input type="submit" class="btn btn-primary" value="등록">
 				</div>
-			</form>
 		</div>
 	</div>
+</center>
+	<%@ include file="footer.jsp" %>
 </body>
 </html>

@@ -6,8 +6,21 @@
 <meta charset="UTF-8">
 <title>notice2</title>
 </head>
+	<style>
+		h2 { 
+		font-size:30px; color:#EB6952; text-align:center;
+		line-height:1; font-size:30px; color: #EB6952; padding: 30px;
+		}
+	</style>
 <body>
-<h2>SSS호텔 개인정보처리방침 개정안내</h2>
+<h2 style="color:#EB6952"> 공지사항</h2> <br>
+<br>
+<h3 style="text-align:left; color:#483D8B; margin-left: 40px;">
+SSS호텔 개인정보처리방침 개정안내 2022년 6월 1일
+</h3>
+
+<p style="background-color:#E4EFFD; margin:10px 40px 50px 40px;">
+<br>
 항상 SSS호텔을 이용해 주시는 고객님께 감사드립니다. 개인정보처리방침이 전면 개정되어 안내드립니다. <br>
 
 1. 개정사항<br>
@@ -18,5 +31,8 @@
 
 2. 개정시기 : 2022년 10월 25일<br>
 공고시기 : 2022년 10월 25일<br>
+<br>
+</p>
+
 </body>
 </html>

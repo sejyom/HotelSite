@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import Member.MemberDAO;
 
@@ -40,13 +41,18 @@ public class DeleteController extends HttpServlet {
 		MemberDAO dao = new MemberDAO();
 		RequestDispatcher dispatcher;
 		String id = request.getParameter("id");
-
+		HttpSession session = request.getSession();
 		try {
 			System.out.println("withdrawal(manager)   | id: " + id);
 			System.out.println("------------------------------------------------------------------------");
 			dao.deleteMember(id);
+			if(((String)session.getAttribute("id")).equals("akxxkd")) {
+				dispatcher = request.getRequestDispatcher("index.jsp?addr=managerPage.jsp");
+				dispatcher.forward(request, response);
+			} else {
 			dispatcher = request.getRequestDispatcher("index.jsp");
 			dispatcher.forward(request, response);
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -2,49 +2,59 @@
     pageEncoding="UTF-8"%>
 <%
 	request.setCharacterEncoding("UTF-8");
-	String id = (String)session.getAttribute("id");
+	String cont = request.getParameter("cont");
+	String addr = request.getParameter("addr");
+	if(addr == null){
+		addr = "image.jsp";
+	}
 %>
+
 <!DOCTYPE html>
 <html>
 <head>
 <style>
 
-
 a {
 	text-decoration: none;
 }
-
 </style>
 
 <meta charset="UTF-8">
 <title>SSS Hotel</title>
 </head>
-
-
-<body id="body">
-
-<header style="height: 5%; ">
-
-<%
-	if (id != null) {
-%>
-	<%@ include file="top2.jsp" %>
-<%
-	} else {
-%>
-	<%@ include file="top.jsp" %>
-	
-<%
+ 
+ <script>
+ /* 예약 페이지에서 날짜 선택 안했을 시 예외 처리 */
+	<%
+	String resu = request.getParameter("result");
+	if(resu!=null&&resu.equals("derror")){
+		
+	   %>alert("날짜 형식이 잘못되었습니다.")<%   
 	}
-%>
+	if(resu!=null&&resu.equals("derror2")){
+	   %>alert("날짜를 선택하셔야 합니다.")<%   
+	}
+	
+	if(resu!=null&&resu.equals("ook")){
+		%>alert("상품이 등록되었습니다.")<%	
+	}
+	if(resu!=null&&resu.equals("ddel")){
+		%>alert("상품이 삭제되었습니다.")<%   
+	}
+	%>
+ </script>
+ 
+<body style="margin: 0px;">
+<header style="height: 5%; ">
+<%@ include file="top.jsp" %>
 </header>
 
 <section style="height: 70%;">
-<%@ include file="image.jsp" %>
+<jsp:include page="<%= addr %>" />
 </section>
 
-<footer style="margin-left: 200px; margin-right: 200px; height:10%; ">
-<jsp:include page="footer.jsp" />
+<footer style="margin: 100px 200px 0 200px; height:10%; ">
+<%@ include file="footer.jsp" %>
 </footer>
 </body>
 </html>

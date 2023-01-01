@@ -29,7 +29,7 @@ public class MemberListController extends HttpServlet {
 			ArrayList<MemberVO> memberList = dao.selectMemberList();
 			HttpSession session = request.getSession();
 			session.setAttribute("memberList", memberList);
-			request.getRequestDispatcher("managerPage/userList.jsp").forward(request, response);
+			request.getRequestDispatcher("index.jsp?addr=managerPage.jsp&cont=userList.jsp").forward(request, response);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
